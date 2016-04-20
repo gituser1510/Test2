@@ -1,0 +1,687 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{89AA1278-6891-4285-9E83-84D04DDE1097}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChemInform</RootNamespace>
+    <AssemblyName>ChemInform</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>wci_icon-48x48.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="dom4j">
+      <HintPath>..\..\Dependencies\References\dom4j.dll</HintPath>
+    </Reference>
+    <Reference Include="Excel, Version=2.1.2.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Guifreaks.Common, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b9e40ae01dee0076" />
+    <Reference Include="Guifreaks.Navisuite, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7f6dc13cbca790ea, processorArchitecture=MSIL" />
+    <Reference Include="IKVM.OpenJDK.Core, Version=0.42.1.105, Culture=neutral, PublicKeyToken=d25ce09139c726a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sairam.punyamantula\Desktop\IKVM_41\IKVM.OpenJDK.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKVM.Runtime, Version=0.42.1.105, Culture=neutral, PublicKeyToken=d25ce09139c726a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\sairam.punyamantula\Desktop\IKVM_41\IKVM.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>C:\Users\sairam.punyamantula\Desktop\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="JChem, Version=5.8.0.430, Culture=neutral, PublicKeyToken=d25ce09139c726a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\JChem.dll</HintPath>
+    </Reference>
+    <Reference Include="MarkupConverter, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MarkupConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="MDL.Draw.Editor, Version=4.2.0.605, Culture=neutral, PublicKeyToken=e922e3fd683b3777, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Accelrys\Accelrys Draw 4.1\lib\MDL.Draw.Editor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MDL.Draw.Foundation, Version=4.2.0.605, Culture=neutral, PublicKeyToken=e922e3fd683b3777, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Accelrys\Accelrys Draw 4.1\lib\MDL.Draw.Foundation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MDL.Draw.Renderer, Version=4.2.0.605, Culture=neutral, PublicKeyToken=e922e3fd683b3777, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Accelrys\Accelrys Draw 4.1\lib\MDL.Draw.Renderer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=1.0.0.505, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CAS_IRN\IndxReactNarr\IndxReactNarr\bin\Debug\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="SautinSoft.PdfFocus, Version=4.3.9.3, Culture=neutral, PublicKeyToken=0b79b934109b3e9e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\SautinSoft.PdfFocus.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aboutWCI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aboutWCI.Designer.cs">
+      <DependentUpon>aboutWCI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\DataConversions.cs" />
+    <Compile Include="Common\DataGridViewAutoFilterColumnHeaderCell.cs" />
+    <Compile Include="Common\DataGridViewAutoFilterTextBoxColumn.cs" />
+    <Compile Include="Common\Download_UploadPdf.cs" />
+    <Compile Include="Common\Footer.cs" />
+    <Compile Include="Common\General.cs" />
+    <Compile Include="Common\ReactionReference_Test.cs" />
+    <Compile Include="Common\ReactionSchemeValidations.cs" />
+    <Compile Include="Common\RolesMaster.cs" />
+    <Compile Include="Common\SdfImport.cs" />
+    <Compile Include="Common\Validation.cs" />
+    <Compile Include="frmReactionCuration_Journal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReactionCuration_Journal.designer.cs">
+      <DependentUpon>frmReactionCuration_Journal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorHandling\ErrorHandling.cs" />
+    <Compile Include="Export\frmBatchExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export\frmBatchExport.designer.cs">
+      <DependentUpon>frmBatchExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Export\frmShipmentDelivery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Export\frmShipmentDelivery.Designer.cs">
+      <DependentUpon>frmShipmentDelivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Export\ShipmentExport.cs" />
+    <Compile Include="Export\ReactionExport.cs" />
+    <Compile Include="Export\SpectralExport.cs" />
+    <Compile Include="frmCreateShipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateShipment.Designer.cs">
+      <DependentUpon>frmCreateShipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrossRefs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrossRefs.Designer.cs">
+      <DependentUpon>frmCrossRefs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNavigTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNavigTest.Designer.cs">
+      <DependentUpon>frmNavigTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewReaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewReaction.Designer.cs">
+      <DependentUpon>frmNewReaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQCNoDoneRxns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQCNoDoneRxns.designer.cs">
+      <DependentUpon>frmQCNoDoneRxns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRxnReference.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRxnReference.Designer.cs">
+      <DependentUpon>frmRxnReference.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSolAgentReference.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSolAgentReference.designer.cs">
+      <DependentUpon>frmSolAgentReference.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditConditions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditConditions.designer.cs">
+      <DependentUpon>FrmEditConditions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmExportXml.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmExportXml.designer.cs">
+      <DependentUpon>FrmExportXml.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMDI.Designer.cs">
+      <DependentUpon>frmMDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditParticipants.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditParticipants.designer.cs">
+      <DependentUpon>FrmEditParticipants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditProduct.designer.cs">
+      <DependentUpon>FrmEditProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmParticipantsMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmParticipantsMaster.Designer.cs">
+      <DependentUpon>FrmParticipantsMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReactionCuration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReactionCuration.designer.cs">
+      <DependentUpon>frmReactionCuration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSpectralCuration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSpectralCuration.Designer.cs">
+      <DependentUpon>FrmSpectralCuration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ChemistryOperations.cs" />
+    <Compile Include="Common\ConvertToLists.cs" />
+    <Compile Include="Common\GlobalVariables.cs" />
+    <Compile Include="frmSYSNoMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSYSNoMaster.Designer.cs">
+      <DependentUpon>frmSYSNoMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTL_ModifyTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTL_ModifyTask.Designer.cs">
+      <DependentUpon>FrmTL_ModifyTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LdapAuthentication.cs" />
+    <Compile Include="OSRA\ImageToStructure.cs" />
+    <Compile Include="PdfOperations\PdfExport.cs" />
+    <Compile Include="PdfOperations\ReSizeImage.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FrmMasterEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMasterEntry.designer.cs">
+      <DependentUpon>FrmMasterEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmDailyStatusReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmDailyStatusReport.designer.cs">
+      <DependentUpon>frmDailyStatusReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmDeliveredSolvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmDeliveredSolvents.Designer.cs">
+      <DependentUpon>frmDeliveredSolvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmDeliveryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmDeliveryReport.Designer.cs">
+      <DependentUpon>frmDeliveryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmShipmentStatusReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmShipmentStatusReport.designer.cs">
+      <DependentUpon>frmShipmentStatusReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmUserDateWiseSummaryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmUserDateWiseSummaryReport.designer.cs">
+      <DependentUpon>frmUserDateWiseSummaryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmUserHourlyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmUserHourlyReport.Designer.cs">
+      <DependentUpon>frmUserHourlyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RxnChart\Box.cs" />
+    <Compile Include="RxnChart\NodePos.cs" />
+    <Compile Include="RxnChart\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RxnChart\TestForm.designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RxnChart\TreeBuilder.cs" />
+    <Compile Include="RxnChart\TreeData.cs">
+      <DependentUpon>TreeData.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RxnChart\TreeData.designer.cs">
+      <DependentUpon>TreeData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RxnChart\TreeData1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TreeData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TaskManagement_New\frmModifyTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskManagement_New\frmModifyTask.Designer.cs">
+      <DependentUpon>frmModifyTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskManagement_New\frmTaskAssignment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskManagement_New\frmTaskAssignment.designer.cs">
+      <DependentUpon>frmTaskAssignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskManagement_New\frmTaskSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskManagement_New\frmTaskSheet.designer.cs">
+      <DependentUpon>frmTaskSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskPreparation\frmReviewTaskPreparation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskPreparation\frmReviewTaskPreparation.designer.cs">
+      <DependentUpon>frmReviewTaskPreparation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskPreparation\FrmPdfGererationOnAbstract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskPreparation\FrmPdfGererationOnAbstract.designer.cs">
+      <DependentUpon>FrmPdfGererationOnAbstract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskSheets\FrmTaskSheetCuratorReviewQc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskSheets\FrmTaskSheetCuratorReviewQc.Designer.cs">
+      <DependentUpon>FrmTaskSheetCuratorReviewQc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskSheets\FrmTaskSheetDM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskSheets\FrmTaskSheetDM.Designer.cs">
+      <DependentUpon>FrmTaskSheetDM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskSheets\FrmTaskSheetTL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskSheets\FrmTaskSheetTL.Designer.cs">
+      <DependentUpon>FrmTaskSheetTL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskManagement_New\FrmTaskSheetTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskManagement_New\FrmTaskSheetTP.Designer.cs">
+      <DependentUpon>FrmTaskSheetTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucRxnParticipants.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucRxnParticipants.designer.cs">
+      <DependentUpon>ucRxnParticipants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucSpectrlData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucSpectrlData.designer.cs">
+      <DependentUpon>ucSpectrlData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManagement\frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagement\frmUserCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManagement\frmUserCreate.designer.cs">
+      <DependentUpon>frmUserCreate.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="aboutWCI.resx">
+      <DependentUpon>aboutWCI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReactionCuration_Journal.resx">
+      <DependentUpon>frmReactionCuration_Journal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Export\frmBatchExport.resx">
+      <DependentUpon>frmBatchExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Export\frmShipmentDelivery.resx">
+      <DependentUpon>frmShipmentDelivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateShipment.resx">
+      <DependentUpon>frmCreateShipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrossRefs.resx">
+      <DependentUpon>frmCrossRefs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNavigTest.resx">
+      <DependentUpon>frmNavigTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewReaction.resx">
+      <DependentUpon>frmNewReaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQCNoDoneRxns.resx">
+      <DependentUpon>frmQCNoDoneRxns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRxnReference.resx">
+      <DependentUpon>frmRxnReference.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSolAgentReference.resx">
+      <DependentUpon>frmSolAgentReference.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditConditions.resx">
+      <DependentUpon>FrmEditConditions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmExportXml.resx">
+      <DependentUpon>FrmExportXml.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMDI.resx">
+      <DependentUpon>frmMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditParticipants.resx">
+      <DependentUpon>FrmEditParticipants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditProduct.resx">
+      <DependentUpon>FrmEditProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmParticipantsMaster.resx">
+      <DependentUpon>FrmParticipantsMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReactionCuration.resx">
+      <DependentUpon>frmReactionCuration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSpectralCuration.resx">
+      <DependentUpon>FrmSpectralCuration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSYSNoMaster.resx">
+      <DependentUpon>frmSYSNoMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTL_ModifyTask.resx">
+      <DependentUpon>FrmTL_ModifyTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="FrmMasterEntry.resx">
+      <DependentUpon>FrmMasterEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmDailyStatusReport.resx">
+      <DependentUpon>frmDailyStatusReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmDeliveredSolvents.resx">
+      <DependentUpon>frmDeliveredSolvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmDeliveryReport.resx">
+      <DependentUpon>frmDeliveryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmShipmentStatusReport.resx">
+      <DependentUpon>frmShipmentStatusReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmUserDateWiseSummaryReport.resx">
+      <DependentUpon>frmUserDateWiseSummaryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmUserHourlyReport.resx">
+      <DependentUpon>frmUserHourlyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RxnChart\TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskManagement_New\frmModifyTask.resx">
+      <DependentUpon>frmModifyTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskManagement_New\frmTaskAssignment.resx">
+      <DependentUpon>frmTaskAssignment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskManagement_New\frmTaskSheet.resx">
+      <DependentUpon>frmTaskSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskPreparation\frmReviewTaskPreparation.resx">
+      <DependentUpon>frmReviewTaskPreparation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskPreparation\FrmPdfGererationOnAbstract.resx">
+      <DependentUpon>FrmPdfGererationOnAbstract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskSheets\FrmTaskSheetCuratorReviewQc.resx">
+      <DependentUpon>FrmTaskSheetCuratorReviewQc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskSheets\FrmTaskSheetDM.resx">
+      <DependentUpon>FrmTaskSheetDM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskSheets\FrmTaskSheetTL.resx">
+      <DependentUpon>FrmTaskSheetTL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskManagement_New\FrmTaskSheetTP.resx">
+      <DependentUpon>FrmTaskSheetTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucRxnParticipants.resx">
+      <DependentUpon>ucRxnParticipants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucSpectrlData.resx">
+      <DependentUpon>ucSpectrlData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagement\frmUserCreate.resx">
+      <DependentUpon>frmUserCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="RxnChart\TreeData.xsc">
+      <DependentUpon>TreeData.xsd</DependentUpon>
+    </None>
+    <None Include="RxnChart\TreeData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TreeData1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RxnChart\TreeData.xss">
+      <DependentUpon>TreeData.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Encryption\" />
+    <Folder Include="TaskManagement\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tab_new_r.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChemInform.Bll\ChemInform.Bll.csproj">
+      <Project>{E8FADDE9-8170-4E64-8334-09F25206F012}</Project>
+      <Name>ChemInform.Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChemInform.Dal\ChemInform.Dal.csproj">
+      <Project>{EA5C60B9-355C-4A99-AAAE-1CDBF50A1EFD}</Project>
+      <Name>ChemInform.Dal</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddSynonym.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Role.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserName.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultset_first.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultset_last.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultset_next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultset_previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_extension_pdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_box_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_row.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editx16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export-excel-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wci-cas-react-screen-bg1-new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wci_cas-react-icon-48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wci_icon-48x48.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RxnComplete1.png" />
+    <None Include="Resources\RxnNotComplete1.jpg" />
+    <None Include="Resources\applications_science.png" />
+    <Content Include="wci_icon-48x48.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

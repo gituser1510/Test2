@@ -1,0 +1,8 @@
+D:\Working Projects\Wiley-ChemInform\ChemInform\ChemInformDAL\bin\Debug\ChemInformDAL.dll
+D:\Working Projects\Wiley-ChemInform\ChemInform\ChemInformDAL\bin\Debug\ChemInformDAL.pdb
+D:\Working Projects\Wiley-ChemInform\ChemInform\ChemInformDAL\obj\Debug\ChemInformDAL.dll
+D:\Working Projects\Wiley-ChemInform\ChemInform\ChemInformDAL\obj\Debug\ChemInformDAL.pdb
+D:\Working Projects\Wiley-ChemInform\ChemInform\ChemInformDAL\bin\Debug\ChemInformBAL.dll
+D:\Working Projects\Wiley-ChemInform\ChemInform\ChemInformDAL\bin\Debug\Oracle.DataAccess.dll
+D:\Working Projects\Wiley-ChemInform\ChemInform\ChemInformDAL\bin\Debug\ChemInformBAL.pdb
+D:\Working Projects\Wiley-ChemInform\ChemInform\ChemInformDAL\obj\Debug\ChemInformDAL.csprojResolveAssemblyReference.cache

@@ -1,0 +1,8 @@
+D:\Working Projects\Wiley-ChemInform\ChemInform\ChemInformBAL\bin\Debug\ChemInformBAL.dll
+D:\Working Projects\Wiley-ChemInform\ChemInform\ChemInformBAL\bin\Debug\ChemInformBAL.pdb
+D:\Working Projects\Wiley-ChemInform\ChemInform\ChemInformBAL\obj\Debug\ChemInformBAL.dll
+D:\Working Projects\Wiley-ChemInform\ChemInform\ChemInformBAL\obj\Debug\ChemInformBAL.pdb
+D:\Working Projects\Wiley-ChemInform\ChemInform\ChemInform.Bll\bin\Debug\ChemInform.Bll.dll
+D:\Working Projects\Wiley-ChemInform\ChemInform\ChemInform.Bll\bin\Debug\ChemInform.Bll.pdb
+D:\Working Projects\Wiley-ChemInform\ChemInform\ChemInform.Bll\obj\Debug\ChemInform.Bll.dll
+D:\Working Projects\Wiley-ChemInform\ChemInform\ChemInform.Bll\obj\Debug\ChemInform.Bll.pdb

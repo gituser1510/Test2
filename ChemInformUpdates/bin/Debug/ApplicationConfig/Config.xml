@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <appSettings>
+    <add key="AppConnectionString" value="DevConnectionString" />
+    
+    <!--<add key="DatConnectionString" value="ProdDATConnection" />-->
+    
+    <add key="ClientSettingsProvider.ServiceUri" value="" />
+  </appSettings>
+  <connectionStrings>
+    <!-- .Net Connection strings-->
+
+    <!--Production connection srtrings-->
+    <!--<add name="ProdConnectionString" connectionString="Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=172.21.0.46)(PORT=1521)))
+                (CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=GOSTAR)));User Id=CAS_INDEX_PRODUCTION;Password=cas_index_production; Connection Timeout=60;Validate Connection = true;" />-->
+
+    <!--Production UAT (Training) connection srtrings-->
+    <!--<add name="TrainConnectionString" connectionString="Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=172.21.0.46)(PORT=1521)))
+                (CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=GOSTAR)));User Id=CAS_INDEX_TRAINING;Password=cas_index_training; Connection Timeout=60;Validate Connection = true;" />-->
+   
+    <!--Development connection srtrings by Sairam for ORCL.GVKBIO.COM-->
+    <add name="DevConnectionString" connectionString="Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=172.21.0.64)(PORT=1521)))
+                (CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=ORCL.GVKBIO.COM)));User Id=WILEY_CHEMINFORM;Password=WILEY_CHEMINFORM; Connection Timeout=60;Validate Connection = true;"/>
+
+    <!--Testing Team connection srtrings-->
+    <!--<add name="TestConnectionString" connectionString="Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=172.21.0.63)(PORT=1521)))
+                (CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=ora11gv4)));User Id=CAS_INDEX;Password=CAS_INDEX; Connection Timeout=60;Validate Connection = true;" />-->
+
+    <!-- DAT Connection strings-->
+    <!--<add name="ProdDATConnection" connectionString="Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=172.21.0.45)(PORT=1522)))
+                (CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=ora11gv4)));User Id=DAT_PROD;Password=DAT_PROD; Connection Timeout=60;Validate Connection = true;" />-->
+
+    
+    
+    
+  </connectionStrings>
+</configuration>
